@@ -8,6 +8,7 @@ class InsightsExtractor:
 
     def extract_top_keywords(self, corpus: list[str], top_n: int = 5) -> list[tuple[str, float]]:
         """Extracts top N representative keywords across the feedback corpus."""
+        
         # Tokenize and lemmatize every document
         tokenized_corpus = [
             " ".join(self.preprocessor.tokenize_and_lemmatize(doc))
